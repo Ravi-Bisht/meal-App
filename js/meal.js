@@ -34,13 +34,16 @@ fetchMeal();
     const meals = [];
     for (let i = 0; i < id.length; i++) {
       const mealID = id[i];
-      let meal = await getMealById(mealID);
+      let meal;
+      if(i==id.length-1){ 
+      meal = await getMealById(mealID);
+      }
     //   addMealToFav(meal);
       meals.push(meal);//add the new item to the start always
       // meals[0]=meal;
       if(meals.length==2){
         removeMeal();   
- }
+      }
     }
     // console.log(meals);
 
