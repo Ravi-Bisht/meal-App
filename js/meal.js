@@ -13,9 +13,6 @@ const area = document.getElementById('area');
 
 
 
-let meal;
-
-
 fetchMeal();
 
   // Fetches the Meal based on the ID associated with it
@@ -25,7 +22,7 @@ fetchMeal();
     );
     const data = await resp.json();
     const meal = data.meals;
-    console.log(meal)
+    // console.log(meal)
   
     return meal;
   }
