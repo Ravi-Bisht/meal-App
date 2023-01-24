@@ -45,6 +45,9 @@ header.innerHTML = `<img src="/assets/loading.gif">`;
     //   addMealToFav(meal);
       meals.push(meal);//add the new item to the start always
       // meals[0]=meal;
+      if(meals.length==2){
+        removeMeal();   
+ }
     }
     // console.log(meals);
 
@@ -63,16 +66,17 @@ header.innerHTML = `<img src="/assets/loading.gif">`;
       ingredient.classList.add('ingredient')
       const m=meals[meals.length-1][0];
       // ingredient.innerHTML=m[`strIngredient${i}`];
-      if(m[`strIngredient${i}`] !==""){
+      if(m[`strIngredient${i}`] !=="" ){
         ingredient.innerHTML=`${m[`strIngredient${i}`]} - ${m[`strMeasure${i}`]}`;
         ingredients.appendChild(ingredient); 
-      }          
 
+        if(ingredient.innerText.includes("null")){
+          ingredients.removeChild(ingredient);
+        }
+      }   
     }
 
-    if(meals.length==2){
-    removeMeal();   
-  }
+   
 
   }
 

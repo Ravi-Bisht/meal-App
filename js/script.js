@@ -126,8 +126,8 @@ async function searchRecipe(event){
     //using trim to remove extra spaces in left and right
     const inputValue = input.value.trim();
 
-    console.log(inputValue.trim());
-    console.log(inputValue);
+    // console.log(inputValue.trim());
+    // console.log(inputValue);
 
     // check if the value is empty if yes return
 
@@ -142,7 +142,7 @@ async function searchRecipe(event){
        await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`
         ).then((res) => res.json()
         ).then((data) => {
-            console.log(data)
+            // console.log(data)
             // console.log(data.meals[1])
 
         
@@ -170,7 +170,7 @@ async function searchRecipe(event){
                 mealDiv.appendChild(a);
                 
 
-
+               // adding the clicked recipe to the local storage for the meal.html page
                 a.addEventListener('click',()=>{
 
                     addMeal(meal.idMeal);
@@ -206,11 +206,7 @@ async function searchRecipe(event){
                 favBtn.setAttribute("value","add");
                 favBtn.setAttribute("id",`${meal.idMeal}`);
                 favBtn.innerHTML=`<i class="fa-solid fa-heart"></i>`;
-                // if(favBtn.id==`${meal.idMeal}`){
-                //     favBtn.style.color="red";
-                // }else{
-                //     favBtn.style.color="black";                    
-                // }
+               
                 
                 // append fav btn
                 mealDiv.appendChild(favBtn);
@@ -245,7 +241,7 @@ async function searchRecipe(event){
 
 
 
-// local storage 
+// local storage  for favourites page
 
 // Fetches the Meal from the Local Storage
 function getMealLS() {
@@ -354,11 +350,6 @@ autocomplete(input, mealArr);
 
 
 
-
-
-
-
-// favourites js 
 
 
 

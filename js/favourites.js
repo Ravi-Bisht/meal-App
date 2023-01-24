@@ -118,25 +118,6 @@ function addMealToFav(meal) {
           } 
     })
   
-    // const x = fav_meals.querySelector('.fa-x');
-  
-    // x.addEventListener('click', () => {
-    //   removeMealLS(meal.idMeal);
-  
-    //   const heart_btns = document.querySelectorAll('.fa-heart');
-    //   heart_btns.forEach((heart_btn) => {
-    //     heart_btn.setAttribute('class', 'fa-regular fa-heart');
-    //   });
-    //   fetchFavMeals();
-    // });
-  
-    // fav_meals.firstChild.nextSibling.firstChild.nextSibling.addEventListener(
-    //   'click',
-    //   () => {
-    //     showMealPopup(meal);
-    //   }
-    // );
-  
     favRecipes.appendChild(mealDiv);
 
   }
