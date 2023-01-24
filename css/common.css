@@ -94,3 +94,29 @@ body{
 .add-fav i{
   font-size: 1.5rem;
 }
+
+/*meadia queries*/
+
+
+
+@media only screen and (max-width: 1000px) {
+  #recipes {
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto auto;
+    background-color: rgba(249, 234, 213, 255);
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  #recipes {
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+    background-color: rgba(249, 234, 213, 255);
+  }
+  
+}
