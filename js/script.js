@@ -253,8 +253,18 @@ function getMealLS() {
   // Add Meal to the Local Storage
   function addMealLS(mealID) {
     const mealIds = getMealLS();
+    // console.log(mealIds);
+
+    // checking if meal already present in favourites if yes then we will return and do nothing
+    for(let i=0;i<mealIds.length;i++){
+      if(mealIds[i]==mealID){
+        alert("Already Added to Favourites");
+        return;
+      }      
+    }
     localStorage.setItem('mealIds', JSON.stringify([...mealIds, mealID]));
   }
+
   
   // Remove Meal from Local Storage
   function removeMealLS(mealID) {
