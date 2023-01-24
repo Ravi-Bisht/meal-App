@@ -32,9 +32,6 @@ fetchMeal();
 
   // It Performs Operation to fetch Meal
 
-
-header.innerHTML = `<img src="/assets/loading.gif">`;
-
   async function fetchMeal() {
     
     const id = getMeal();
