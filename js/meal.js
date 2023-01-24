@@ -22,8 +22,7 @@ fetchMeal();
     );
     const data = await resp.json();
     const meal = data.meals;
-    // console.log(meal)
-  
+    // console.log(meal)  
     return meal;
   }
 
@@ -76,7 +75,6 @@ fetchMeal();
 
 
 // local storage 
-
   function getMeal() {
     const id = JSON.parse(localStorage.getItem('id'));
   
